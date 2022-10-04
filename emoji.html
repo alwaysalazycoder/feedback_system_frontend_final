@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ececec;
+        }
+        .containar{
+            background-color: #ececec;
+            border-radius: 1rem;
+            box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+            width: 100vw;
+            height: 15vh;
+        }
+        .wrapper{
+            margin: 2rem 0;
+        }
+        .text{
+            margin-bottom: 0.5rem;
+            font-size: 1em;
+            color: #000;
+            text-align: center;
+        }
+        .emoji{
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;           
+        }
+        .police__img{
+            object-fit: contain;
+            max-width: 25vw;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            height: 25vh;
+            width: 100vw;
+            padding-top: 2rem;
+            padding-bottom: 0rem;
+        }
+        .police__feedback{
+            font-size: 7px;
+        }
+        .police__heading{
+            font-size: 12px;
+        }
+        
+        .containar__1{
+            margin-top: 1rem;
+        }
+
+        .text100{
+            height: 100vh;
+            width: 60vw;
+        }
+        .btn100{
+            width: 50vw;
+            height: 6vh;
+            border-radius: 2rem;
+            background: rgb(252, 99, 3);
+            color: #fff;
+        }
+        .btn50{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2rem;
+        }
+
+        /* FOR EMOJI ANIMATION  */
+
+        .emoji1{
+            animation: anime 2s  10s  forwards linear;
+        }
+        @keyframes anime {
+            0%{
+               transform: scale(1); 
+            }
+            25%{
+                transform: scale(1.4);
+            }
+            75%{
+                transform: scale(1.4);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .emoji2{
+            animation: anime2 2s 8s  forwards linear;
+        }
+        @keyframes anime2 {
+            0%{
+               transform: scale(1); 
+            }
+            25%{
+                transform: scale(1.4);
+            }
+            75%{
+                transform: scale(1.4);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .emoji3{
+            animation: anime3 2s  6s  forwards linear;
+        }
+        @keyframes anime3 {
+            0%{
+               transform: scale(1); 
+            }
+            25%{
+                transform: scale(1.4);
+            }
+            75%{
+                transform: scale(1.4);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .emoji4{
+            animation: anime4 2s 4s  forwards linear;
+        }
+        @keyframes anime4 {
+            0%{
+               transform: scale(1); 
+            }
+            25%{
+                transform: scale(1.4);
+            }
+            75%{
+                transform: scale(1.4);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .emoji5{
+            animation: anime5 2s 2s  forwards linear;
+        }
+        @keyframes anime5 {
+            0%{
+               transform: scale(1); 
+            }
+            25%{
+                transform: scale(1.4);
+            }
+            75%{
+                transform: scale(1.4);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+       
+    </style>
+</head>
+<body>
+ <div class="allmain">
+     
+      <div class="main">
+              <img class="police__img" src="./images/Logo.png" alt="">
+              <span class="police__heading">GUJARAT POLICE</span>
+              <span class="police__feedback">(FEEDBACK PORTAL)</span>
+              </div>
+      <div class="containar">
+          <div class="wrapper">
+              <p class="text">how would you like his/her behaviur ?</p>
+              <div class="emoji">
+                  <div class="emoji1">😡</div>
+                  <div class="emoji2">😠</div>
+                  <div class="emoji3">🙂</div>
+                  <div class="emoji4">😃</div>
+                  <div class="emoji5">😍</div>
+              </div>
+          </div>
+      </div>
+      <div class="containar containar__1">
+        <div class="wrapper">
+            <p class="text">how would you like enviroment of police station ? ?</p>
+            <div class="emoji">
+                <div class="emoji1">😡</div>
+                <div class="emoji2">😠</div>
+                <div class="emoji3">🙂</div>
+                <div class="emoji4">😃</div>
+                <div class="emoji5">😍</div>
+            </div>
+        </div>
+    </div>
+    <div class="containar containar__1">
+        <div class="wrapper">
+            <p class="text">how would you like enviroment of police station ? ?</p>
+            <div class="emoji">
+                <div class="emoji1">😡</div>
+                <div class="emoji2">😠</div>
+                <div class="emoji3">🙂</div>
+                <div class="emoji4">😃</div>
+                <div class="emoji5">😍</div>
+            </div>
+        </div>
+    </div>
+    <div class="containar containar__1">
+        <div class="wrapper">
+            <p class="text">how would you like enviroment of police station ? ?</p>
+            <div class="emoji">
+                <div class="emoji1">😡</div>
+                <div class="emoji2">😠</div>
+                <div class="emoji3">🙂</div>
+                <div class="emoji4">😃</div>
+                <div class="emoji5">😍</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="text100"><textarea name="" id="" cols="30" rows="10" placeholder="ANY OTHER SUGGESTION..."></textarea></div> -->
+    <div class="btn50"> <button class="btn100">submit</button></div>
+ </div>
+</body>
+</html>
