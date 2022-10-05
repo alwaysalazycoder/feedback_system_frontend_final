@@ -59,7 +59,6 @@ hr {
   height: 15vh;
   flex-direction: column;
   /* background-color: blueviolet; */
-
   margin: 20px;
   text-align: center;
   font-weight: bolder;
@@ -334,8 +333,10 @@ input[type=radio]#language_input {
 .emoji{
   display: flex;
   flex-direction: row;
-  padding-top: 20px;
+  padding-top: 35px;
   height: 20vh;
+  justify-content: space-around;
+  font-size: 35px;
 }
 
 @keyframes anime {
