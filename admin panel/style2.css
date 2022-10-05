@@ -54,7 +54,6 @@
     /* background-color: aliceblue; */
     display: flex;
     flex-direction: column;
-    padding: 20px;
     /* margin-bottom: 20px;  */
 }
 
@@ -122,7 +121,7 @@ input {
     align-items: center;
 }
 
-hr {
+.lastline{
     margin: 30px 0 30px 0;
     width: 18vw;
     color: white;

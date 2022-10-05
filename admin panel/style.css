@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 :root{
     /* ===== Colors ===== */
     --primary-color: #0E4BF1;
@@ -15,6 +14,7 @@
     --black-light-color: #707070;
     --border-color: #e6e5e5;
     --toggle-color: #DDD;
+    --theme-color : orange;
     --box1-color: #4DA3FF;
     --box2-color: #FFE6AC;
     --box3-color: #E7D1FC;
@@ -32,8 +32,8 @@
 }
 
 body{
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: 99vh;
+    min-width: 95vw;
     background-color: var(--panel-color);
 }
 body.dark{
@@ -48,7 +48,9 @@ body.dark{
     --box3-color: #3A3B3C;
     --title-icon-color: #CCC;
 }
+
 /* === Custom Scroll Bar CSS === */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -56,20 +58,24 @@ body.dark{
     background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: var(--theme-color);
+
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #0b3cc1;
-    background: pink;
+    background: var(--theme-color)
+    /* background: pink; */
 }
 
 body.dark::-webkit-scrollbar-thumb:hover,
 body.dark .activity-data::-webkit-scrollbar-thumb:hover{
     background: #3A3B3C;
 }
+
+/* nav bar  */
 
 nav{
     position: fixed;
@@ -82,10 +88,12 @@ nav{
     background-color: var(--panel-color);
     border-right: 1px solid var(--border-color);
     transition: var(--tran-05);
-    background-color: pink;
-    background-color: var(--panel-color)
+    background-color: var(--panel-color);
+    background-color: rgba(227, 226, 226, 0.224)
+    /* border: solid black 2px; */
     
 }
+
 nav.close{
     width: 73px;
     /* width: 25vw; */
@@ -143,6 +151,7 @@ nav .menu-items{
     width: 5px;
     border-radius: 50%;
     background-color: var(--primary-color);
+    background-color: var(--theme-color);
 }
 body.dark li a:hover:before{
     background-color: var(--text-color);
@@ -168,12 +177,15 @@ nav.close li a .link-name{
 }
 .nav-links li a:hover i,
 .nav-links li a:hover .link-name{
-    color: var(--primary-color);
+    color:var(--theme-color)
 }
 body.dark .nav-links li a:hover i,
 body.dark .nav-links li a:hover .link-name{
     color: var(--text-color);
 }
+
+/* menuu */
+
 .menu-items .logout-mode{
     padding-top: 10px;
     border-top: 1px solid var(--border-color);
@@ -217,12 +229,14 @@ body.dark .switch:before{
     left: 20px;
 }
 
+/* title */
+
 .dashboard{
     position: relative;
     left: 250px;
     background-color: var(--panel-color);
     min-height: 100vh;
-    max-width: 80vw;
+    max-width: 81.8vw;
     padding: 10px 14px;
     transition: var(--tran-05);
     margin: 0;
@@ -234,8 +248,14 @@ nav.close ~ .dashboard{
 .dashboard .dash-title{
 height: 10vh;
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
+}
+hr{
+    border-top: 3px solid orange;
+    margin: 10px 0;
+    width: 70vw;
 }
 .dashboard .dash-title p{
     font-size: 24px;
@@ -244,7 +264,8 @@ align-items: center;
 
 }
 .dashboard .dash-content{
-height: 100vh;
+/* height: 100vh; */
+min-height: 85vh;
 max-width: 78vw;
 }
 .dash-content .title{
@@ -257,6 +278,7 @@ max-width: 78vw;
     height: 35px;
     width: 35px;
     background-color: var(--primary-color);
+    background-color: var(--theme-color);
     border-radius: 6px;
     color: var(--title-icon-color);
     display: flex;
@@ -270,6 +292,9 @@ max-width: 78vw;
     color: var(--text-color);
     margin-left: 10px;
 }
+
+/* boxes */
+
 .dash-content .boxes{
     display: flex;
     align-items: center;
@@ -283,7 +308,7 @@ max-width: 78vw;
     border-radius: 12px;
     width: calc(100% / 3 - 15px);
     padding: 15px 20px;
-    background-color: var(--box1-color);
+    background-color: pink;
     transition: var(--tran-05);
 }
 .boxes .box i{
@@ -302,11 +327,21 @@ max-width: 78vw;
     color: var(--text-color);
 }
 .boxes .box.box2{
-    background-color: var(--box2-color);
+    background-color: var(--theme-color)
 }
 .boxes .box.box3{
-    background-color: var(--box3-color);
+    background-color: turquoise
 }
+.box{
+    box-shadow:      rgba(0, 0, 0, 0.01) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* activity section */
+
 .dash-content .activity .activity-data{
     display: flex;
     justify-content: space-between;
@@ -340,8 +375,43 @@ max-width: 78vw;
 .dash-content{
     background-color: red;
     background-color: var(--panel-color);
-    
+
 }
+/* ===================================================================
+=================================================================================
+========================================================================
+================================================================================= */
+/* 🔥🔥🔥🔥 Generate QR Code page  🔥🔥🔥🔥 */
+
+.qr_image_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+}
+.qr_image_container .qr_image img{
+    width: 40vw;
+}
+.download_btn button{
+    border: none;
+    outline: none;
+    padding: 8px;
+    color: white;
+    background-color: orange;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 8px;
+    min-width: 10vw;
+    margin-right: 10px;
+}
+
+/* ===================================================================
+=================================================================================
+========================================================================
+================================================================================= */
+/* 🔥🔥🔥🔥 responisive code  🔥🔥🔥🔥 */
 
 
 @media (max-width: 1000px) {
@@ -444,4 +514,85 @@ max-width: 78vw;
         left: 0;
         width: 100%;
     }
+}
+
+/* 
+====================================================================
+hemant's push
+====================================================================== */
+
+.select__police{
+    display: flex;
+    justify-content: space-around;
+    /* margin-bottom: 100px; */
+    padding-bottom: 100px;
+}
+
+select{
+    min-width: 25vw;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 9px;
+    border: 1px solid gray;
+    margin: 15px 0px;
+    /* padding-bottom: /px; */
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8vh;
+} 
+.btn800{    
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow:  rgba(0, 0, 0, 0.01) 0px 54px 55px,
+                 rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                 rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                 rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                 rgba(0, 0, 0, 0.09) 0px -3px 5px;
+           transition: var(--tran-05);
+    max-width: 70vw;
+    min-width: 20vw;
+    color: #000;
+}  
+
+
+
+
+
+.calender{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 100px;
+
+
+}
+
+.datefrom1, .dateto1{
+    min-width: 25vw;
+    min-height: 5vh;
+    border-radius: 9px;
+    border: 1px solid gray;
+    /* margin: 15px 0px; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+
+.fordatep{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
 }
