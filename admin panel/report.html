@@ -12,7 +12,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+        
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['MonthlyRatings', 'Positive', 'Negative ','Average'],
+              ['Month-1',  1000,      1400, 1110],
+              ['Month-2',  1170,      460,910],
+              ['Month-3',  660,       110,510],
+              ['Month-4',  1330,       40,810]
+            ]);
+        
+            var options = {
+              title: 'Monthly Review of Positive and Negative Ratings',
+              curveType: 'function',
+              legend: { position: 'bottom' },
+              colors: ['blue','red','green']
 
+            };
+        
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart_monthly_report'));
+        
+            chart.draw(data, options);
+          }
+        </script>
+
+    
 </head>
 
 <body>
@@ -67,19 +95,24 @@
             <p>Feedback Management System</p>
             <hr>
         </div>
-        <div class="dash-content" >
-            <div class="qr_image_container">
-                <div class="qr_image">
-                    <img src="./police.jpg" alt="">
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <!-- <i class="fa-solid fa-chart-pie"></i> -->
+                    <i class="fa fa-solid fa-chart-simple"></i>
+                    <span class="text">Monthly Report</span>
                 </div>
-                <div class="download_btn btn">
-                    <button>Download QR</button>
+           
+            <div class="charts">
+                <div class="chart">
+                    <div id="curve_chart_monthly_report" style="width: 900px; height: 500px"></div>
                 </div>
             </div>
+
         </div>
     </section>
 
-   
+
 
 </body>
 

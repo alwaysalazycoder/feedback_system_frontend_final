@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Time(in Min)', 'RatingPercentage'],
+                ['Immediately', 120],
+                ['In 5 mins', 220],
+                ['In 10 mins', 150],
+                ['In 15 mins', 90],
+                ['More than 15 mins', 60]
+            ]);
+
+            var options = {
+                title: 'After how much time you were heard in Police Station'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Stars', 'RatingPercentage'],
+                ['One Star', 46],
+                ['Two Star', 87],
+                ['Three Star', 20],
+                ['Four Star', 2],
+                ['Five Star', 120]
+            ]);
+
+            var options = {
+                title: 'How would you rate the environment of the Police Station'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Stars', 'RatingPercentage'],
+                ['One Star', 120],
+                ['Two Star', 230],
+                ['Three Star', 256],
+                ['Four Star', 2021],
+                ['Five Star', 2120]
+            ]);
+
+            var options = {
+                title: 'How would you describe your experience with the police officers'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Stars', 'RatingPercentage'],
+                ['One Star', 13],
+                ['Two Star', 26],
+                ['Three Star', 39],
+                ['Four Star', 45],
+                ['Five Star', 54]
+            ]);
+
+            var options = {
+                title: 'How would you rate the overall environment of the police station'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart4'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="./Logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Gujarat Police</span>
+        </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="./index_main_portal.html">
+                        <i class="fa-solid fa-house-user"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a></li>
+                <li><a href="./content.html">
+                        <i class="fa-solid fa-server"></i>
+                        <span class="link-name">Content</span>
+                    </a></li>
+                <li><a href="./analysis.html">
+                        <i class="fa fa-solid fa-magnifying-glass-chart"></i>
+                        <span class="link-name">Analytics</span>
+                    </a></li>
+                <li><a href="./report.html">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span class="link-name">Report</span>
+                    </a></li>
+                <li><a href="./generateQR.html">
+                        <i class=" fa fa-solid fa-qrcode"></i>
+                        <span class="link-name">Generate QR</span>
+                    </a></li>
+                <li><a href="../admin panel/signup.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="link-name">Add User</span>
+                    </a></li>
+                <li><a href="./change_password.html">
+                        <i class="fa fa-solid fa-lock"></i>
+                        <span class="link-name">Change Password</span>
+                    </a></li>
+                <li><a href="./police.jpg">
+                        <i class="fa fa-solid fa-right-from-bracket"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="dash-title">
+            <p>Feedback Management System</p>
+            <hr>
+        </div>
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="fa fa-solid fa-magnifying-glass-chart"></i>
+                    <span class="text">Analytics</span>
+                </div>
+           
+            <div class="charts">
+                <div class="chart">
+
+                    <div id="piechart1" style="width: 900px; height: 500px;"></div>
+                </div>
+                <div class="chart">
+
+                    <div id="piechart2" style="width: 900px; height: 500px;"></div>
+                </div>
+                <div class="chart">
+
+                    <div id="piechart3" style="width: 900px; height: 500px;"></div>
+                </div>
+                <div class="chart">
+
+                    <div id="piechart4" style="width: 900px; height: 500px;"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
