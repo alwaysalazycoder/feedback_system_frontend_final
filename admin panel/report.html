@@ -20,21 +20,111 @@
           function drawChart() {
             var data = google.visualization.arrayToDataTable([
               ['MonthlyRatings', 'Positive', 'Negative ','Average'],
-              ['Month-1',  1000,      1400, 1110],
-              ['Month-2',  1170,      460,910],
-              ['Month-3',  660,       110,510],
-              ['Month-4',  1330,       40,810]
+              ['Week-1',  10,      14, 11],
+              ['Week-2',  11,      46,91],
+              ['Week-3',  66,       11,51],
+              ['Week-4',  13,       40,81]
             ]);
         
             var options = {
               title: 'Monthly Review of Positive and Negative Ratings',
               curveType: 'function',
               legend: { position: 'bottom' },
-              colors: ['blue','red','green']
+              colors: [
+              "#36a2eb","#ff6384"
+                    , "#ffce56", "#4bc0c0", "#9966ff",],
+
+            //   colors: ['blue','red','green']
 
             };
         
             var chart = new google.visualization.LineChart(document.getElementById('curve_chart_monthly_report'));
+        
+            chart.draw(data, options);
+          }
+        </script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+        
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['MonthlyRatings', 'Positive', 'Negative ','Average'],
+              ['Week-1',  10,      14, 11],
+              ['Week-2',  11,      46,91],
+              ['Week-3',  66,       11,51],
+              ['Week-4',  13,       40,81]
+            ]);
+        
+            var options = {
+              title: 'Monthly Review of Positive and Negative Ratings',
+              curveType: 'function',
+              legend: { position: 'bottom' },
+              
+
+            //   colors: ['blue','red','green']
+
+            };
+        
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart_weekly_report'));
+        
+            chart.draw(data, options);
+          }
+        </script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+        
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['MonthlyRatings', 'Positive', 'Negative ','Average'],
+              ['Week-1',  10,      14, 11],
+              ['Week-2',  11,      46,91],
+              ['Week-3',  66,       11,51],
+              ['Week-4',  13,       40,81]
+            ]);
+        
+            var options = {
+              title: 'Monthly Review of Positive and Negative Ratings',
+              curveType: 'function',
+              legend: { position: 'bottom' },
+              colors: [
+              "#4bc0c0","#ff6384"
+                    , "#36a2eb", "#ffce56", "#9966ff",],
+
+              
+
+            };
+        
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart_weekly_report2'));
+        
+            chart.draw(data, options);
+          }
+        </script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+        
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['MonthlyRatings', 'Positive', 'Negative ','Average'],
+              ['Week-1',  10,      14, 11],
+              ['Week-2',  11,      46,91],
+              ['Week-3',  66,       11,51],
+              ['Week-4',  13,       40,81]
+            ]);
+        
+            var options = {
+              title: 'Monthly Review of Positive and Negative Ratings',
+              curveType: 'function',
+              legend: { position: 'bottom' },
+              
+
+              colors: ['blue','red','green']
+
+            };
+        
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart_weekly_report3'));
         
             chart.draw(data, options);
           }
@@ -90,6 +180,8 @@
         </div>
     </nav>
 
+    
+
     <section class="dashboard">
         <div class="dash-title">
             <p>Feedback Management System</p>
@@ -103,10 +195,72 @@
                     <span class="text">Monthly Report</span>
                 </div>
            
+                <section class="selection-filter">
+                    <div class="selection_container">
+                        <div class="wrapper wrapper1">
+                            <div class="select-btn select-btn1">
+                                <span class="district">Select District</span>
+                                <i class="uil uil-angle-down"></i>
+                            </div>
+                            <div class="content">
+                                <div class="search">
+                                    <i class="uil uil-search"></i>
+                                    <input spellcheck="false" type="text" placeholder="Search" class="input-1">
+                                </div>
+                                <ul class="options options1"></ul>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="wrapper wrapper2">
+                            <div class="select-btn select-btn2">
+                                <span class="taluka">Select Taluka</span>
+                                <i class="uil uil-angle-down"></i>
+                            </div>
+                            <div class="content">
+                                <div class="search">
+                                    <i class="uil uil-search"></i>
+                                    <input spellcheck="false" type="text" placeholder="Search" class="input-2">
+                                </div>
+                                <ul class="options options2"></ul>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="wrapper wrapper3">
+                            <div class="select-btn select-btn3">
+                                <span class="police-station">Select Police Station</span>
+                                <i class="uil uil-angle-down"></i>
+                            </div>
+                            <div class="content">
+                                <div class="search">
+                                    <i class="uil uil-search"></i>
+                                    <input spellcheck="false" type="text" placeholder="Search" class="input-3">
+                                </div>
+                                <ul class="options options3"></ul>
+                            </div>
+                        </div>
+                        <div class="wrapper wrapper4">
+                        <div class="download_btsn bstn">
+                            <button class="selection_button">Get Report </button>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                
             <div class="charts">
                 <div class="chart">
                     <div id="curve_chart_monthly_report" style="width: 900px; height: 500px"></div>
                 </div>
+                <!-- <div class="chart">
+                    <div id="curve_chart_weekly_report" style="width: 900px; height: 500px"></div>
+                </div>
+                <div class="chart">
+                    <div id="curve_chart_weekly_report2" style="width: 900px; height: 500px"></div>
+                </div>
+                <div class="chart">
+                    <div id="curve_chart_weekly_report3" style="width: 900px; height: 500px"></div>
+                </div> -->
             </div>
 
         </div>

@@ -1,0 +1,25 @@
+.table{
+    height: 38vh;
+    width:33vw;
+    /* border: 3px solid; */
+    border-radius: 11px;
+}
+table{
+    border-collapse: collapse;
+    border: solid black;
+    border-radius: 20px;
+    height: 38vh;
+    width:33vw;
+
+}
+td{
+    padding: 5px;
+    height: 20px;
+    border: 1px solid;
+    text-align: center;
+}
+th{
+    background-color: pink;
+    height: 45px;
+    padding: 0 30px;
+}
