@@ -74,12 +74,12 @@ hr {
   display: flex;
   flex-direction: column;
 }
-
+/* 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
 
 .mobile_num,
 .otp_label {
@@ -105,10 +105,10 @@ input {
   appearance: none;
   margin: 0;
 }
-
+/* 
 input[type=number] {
   -moz-appearance: textfield;
-}
+} */
 
 .next{
   margin-bottom: 20px;
@@ -483,7 +483,8 @@ body{
 }
 
 .thanku__box{
-  background: linear-gradient(to bottom, #f1a979 -4%, #ffffff 100%);
+  /* background: linear-gradient(to bottom, #f1a979 -4%, #ffffff 100%); */
+  background-color: #f1a97956;
   width: 100vw;
   height: 100vh;
 }
@@ -551,4 +552,32 @@ body{
     object-fit: contain;
     width: 20vw;
 
+   }
+
+   /* // thankyou page new */
+   div.thankyou_data{
+    min-width: 72vw;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+   }
+   .number_feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 72vw;
+    min-height: 30vh;
+    /* background-color: rebeccapurple; */
+   }
+   .number_feedback span{
+    margin-top: 20px;
+    font-size: 22px;
+   }
+   .citizen_app{
+    margin-top: 20px;
+    font-size: 20px;
    }
